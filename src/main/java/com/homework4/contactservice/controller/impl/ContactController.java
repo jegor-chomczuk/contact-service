@@ -46,14 +46,7 @@ public class ContactController {
     //  Add a new Contact
     @PostMapping()
     @ResponseStatus(HttpStatus.CREATED)
-    public Contact store(@RequestBody @Valid ContactDTO contactDTO) {
-        Contact contact = new Contact (
-                        contactDTO.getName(),
-                        contactDTO.getPhoneNumber(),
-                        contactDTO.getEmail(),
-                        contactDTO.getCompanyName(),
-                        contactDTO.getSalesRepId());
-        contactRepository.save(contact);
-        return contact;
+    public ContactDTO store(@RequestBody @Valid ContactDTO contactDTO) {
+        return contactService.store(contactDTO);
     }
 }

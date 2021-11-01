@@ -19,23 +19,15 @@ public class Contact {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
     @Column(name="contact_name")
     private String name;
-
     @Column(name= "phone_number")
     private String phoneNumber;
-
     private String email;
-
     @Column(name="company_name")
     private String companyName;
-
     private Long salesRepId;
-
     private Long accountId;
-
-//    private List<Long> opportunityId = new ArrayList<>();
 
     public Contact(String name, String phoneNumber, String email, String companyName) {
         this.name = name;
@@ -44,11 +36,12 @@ public class Contact {
         this.companyName = companyName;
     }
 
-    public Contact(String name, String phoneNumber, String email, String companyName, Long salesRepId) {
+    public Contact(String name, String phoneNumber, String email, String companyName, Long salesRepId, Long accountId) {
         this.name = name;
         this.phoneNumber = phoneNumber;
         this.email = email;
         this.companyName = companyName;
         this.salesRepId = salesRepId;
+        this.accountId = accountId;
     }
 }

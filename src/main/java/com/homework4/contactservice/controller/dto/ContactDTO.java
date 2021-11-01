@@ -23,10 +23,6 @@ public class ContactDTO {
     private String companyName;
     @NotNull(message = "Provide a SalesRep id")
     private Long salesRepId;
-//    @NotNull(message = "You must supply a department")
-//    private Long accountId;
-//    @NotNull(message = "You must supply a department")
-//    private List<Long> opportunityId = new ArrayList<>();
-
-
+    @NotNull(message = "Provide a SalesRep id")
+    private Long accountId;
 }
