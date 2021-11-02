@@ -30,7 +30,8 @@ public class ContactService implements IContactService {
                 contact.getEmail(),
                 contact.getCompanyName(),
                 contact.getSalesRepId(),
-                contact.getAccountId()
+                contact.getAccountId(),
+                contact.getId()
                 );
 
         return createdContact;

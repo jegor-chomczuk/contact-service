@@ -23,6 +23,17 @@ public class ContactDTO {
     private String companyName;
     @NotNull(message = "Provide a SalesRep id")
     private Long salesRepId;
-    @NotNull(message = "Provide a SalesRep id")
+    @NotNull(message = "Provide a account id")
     private Long accountId;
+    @NotNull(message = "Provide an id")
+    private Long id;
+
+    public ContactDTO(String name, String phoneNumber, String email, String companyName, Long salesRepId, Long accountId) {
+        this.name = name;
+        this.phoneNumber = phoneNumber;
+        this.email = email;
+        this.companyName = companyName;
+        this.salesRepId = salesRepId;
+        this.accountId = accountId;
+    }
 }
